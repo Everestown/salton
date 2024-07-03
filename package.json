@@ -2,9 +2,10 @@
 	"name": "salton",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "vite dev --host",
+		"dev": "vite",
 		"build": "vite build",
 		"preview": "vite preview",
+		"host": "vite --host",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},

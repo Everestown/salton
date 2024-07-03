@@ -3,6 +3,9 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   plugins: [sveltekit()],
+  server: {
+    host: true,
+  },
   // routes: [
   //   { path: '/home', component: 'Home' },
   //   { path: '/roadmap', component: 'Roadmap' },

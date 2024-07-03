@@ -61,50 +61,54 @@
 	</div>
 </header>
 
-<div class="mobile-menu flex-col w-full">
-	<div class="border bg-white py-3 flex justify-center gap-1 shadow-xl">
-		<div class="group relative px-4 cursor-pointer">
-			<button class="flex h-10 w-10 items-center justify-center rounded-full hover:text-blue-500">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" height="32" width="32">
-					<path stroke="currentColor" d="M9 22V12H15V22M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z"></path>
-				</svg>
+<div class="mobile-menu z-[99] flex-col w-full">
+	<div class="border bg-[--white-smoke] border-none py-3 flex justify-center gap-1 shadow-xl">
+		<div class="group relative px-4 cursor-pointer flex flex-col items-center justify-center">
+			<button onclick="location.href='/home'" type="button" class="flex h-10 w-10 items-center justify-center rounded-full hover:text-blue-500">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="24" width="24">
+					<path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+				</svg>								
 			</button>
-			<span class="absolute -top-10 left-[50%] -translate-x-[50%] z-5 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
+			<!-- <span class="absolute -top-10 left-[50%] -translate-x-[50%] z-5 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
 				Home
-			</span>
+			</span> -->
+			<span class="text-center">Home</span>
 		</div>
 
-		<div class="group relative px-4 cursor-pointer">
-			<button class="flex h-10 w-10 items-center justify-center rounded-full hover:text-blue-500">
+		<div class="group relative px-4 cursor-pointer flex flex-col items-center justify-center">
+			<button onclick="location.href='/roadmap'" type="button" class="flex h-10 w-10  items-center justify-center rounded-full hover:text-blue-500">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="24" width="24">
 					<path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
 				</svg>
 			</button>
-			<span class="absolute -top-10 left-[50%] -translate-x-[50%] z-5 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
+			<!-- <span class="absolute -top-10 left-[50%] -translate-x-[50%] z-5 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
 				Roadmap
-			</span>
+			</span> -->
+			<span class="text-center">Roadmap</span>
 		</div>
 
-		<div class="group relative px-4 cursor-pointer">
-			<button class="flex h-10 w-10 items-center justify-center rounded-full hover:text-blue-500 disabled">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="24" width="24">
+		<div class="group relative px-4 cursor-pointer flex flex-col items-center justify-center">
+			<button type="button" class="flex h-10 w-10 items-center justify-center rounded-ful cursor-not-allowed" disabled>
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#9CA3AF" height="24" width="24">
 					<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
 				</svg>
 			</button>
-			<span class="absolute -top-10 left-[50%] -translate-x-[50%] z-5 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
+			<!-- <span class="absolute -top-10 left-[50%] -translate-x-[50%] z-5 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
 				Soon...
-			</span>
+			</span> -->
+			<span class="text-[#9CA3AF] text-center">Soon</span>
 		</div>
 
-		<div class="group relative px-4 cursor-pointer">
-			<button class="flex h-10 w-10 items-center justify-center rounded-full hover:text-blue-500"> 
+		<div class="group relative px-4 cursor-pointer flex flex-col items-center justify-center">
+			<button type="button" class="flex h-10 w-10 items-center justify-center rounded-full hover:text-blue-500"> 
 				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="24" width="24">
 					<path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
 				</svg>
 			</button>
-			<span class="absolute -top-10 left-[50%] -translate-x-[50%] z-5 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
+			<!-- <span class="absolute -top-10 left-[50%] -translate-x-[50%] z-5 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
 				Share
-			</span>
+			</span> -->
+			<span class="text-center">Share</span>
 		</div>
 	</div>
 </div>
