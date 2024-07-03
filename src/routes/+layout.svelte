@@ -11,16 +11,12 @@
 		<slot />
 	</main>
 
-	<footer>
+	<footer class="mm:mb-20 sm:mb-0">
 		<p class="pt-[5em] text-white opacity-[.25]">© Copyright 2024 Salton</p>
 	</footer>
 </div>
 
 <style lang="postcss">
-	:global(main) {
-	  
-	}
-
 	.app {
 		display: flex;
 		flex-direction: column;
@@ -45,11 +41,5 @@
 		justify-content: center;
 		align-items: center;
 		padding: 12px;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
 	}
 </style>
