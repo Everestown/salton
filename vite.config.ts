@@ -4,7 +4,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   plugins: [sveltekit()],
   server: {
-    host: 'setDefaultResultOrder',
+    host: true,
     port: 3000
   },
   // routes: [

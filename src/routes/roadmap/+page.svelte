@@ -23,7 +23,7 @@
 		<div class="grid grid-cols-3 mm:h-[18vh] sm:h-[20vh] w-full mx-auto bg-black rounded-[15px] shadow-green-500" style="box-shadow: #22c55e .5em 0em 0em 0em;">
 			<div class="col relative h-full w-full overflow-hidden">
 				<h1 class="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 flex items-center justify-start
-				 	h-full mm:text-[6.5em] sm:text-[12em] mm:p-0 sm:pb-3 text-white opacity-[0.15] font-extrabold">
+				 	h-full mm:text-[7em] sm:text-[9em] xl:text-[12em] mm:p-0 sm:pb-0 xl:pb-3 text-white opacity-[0.15] font-extrabold">
 					1
 				</h1>
 			</div>
@@ -47,7 +47,7 @@
 		<div class="grid grid-cols-3 mm:h-[18vh] sm:h-[20vh] w-full mx-auto bg-black rounded-[15px]" style="box-shadow: #22c55e .5em 0em 0em 0em;">
 			<div class="col relative h-full w-full overflow-hidden">
 				<h1 class="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 flex items-center justify-start
-				 	h-full mm:text-[7em] sm:text-[12em] mm:p-0 sm:pb-3 text-white opacity-[0.15] font-extrabold">
+				 	h-full mm:text-[7em] sm:text-[9em] xl:text-[12em] mm:p-0 sm:pb-0 xl:pb-3 text-white opacity-[0.15] font-extrabold">
 					2
 				</h1>
 			</div>
@@ -71,7 +71,7 @@
 		<div class="grid grid-cols-3 mm:h-[18vh] sm:h-[20vh] w-full mx-auto bg-black rounded-[15px]" style="box-shadow: #111 .5em 0em 0em 0em;">
 			<div class="col relative h-full w-full flex overflow-hidden">
 				<h1 class="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 flex items-center justify-start
-				 	h-full mm:text-[7em] sm:text-[12em] mm:p-0 sm:pb-3 text-white opacity-[0.15] font-extrabold">
+				 	h-full mm:text-[7em] sm:text-[9em] xl:text-[12em] mm:p-0 sm:pb-0 xl:pb-3 text-white opacity-[0.15] font-extrabold">
 					3
 				</h1>
 			</div>
@@ -95,7 +95,7 @@
 		<div class="grid grid-cols-3 mm:h-[18vh] sm:h-[20vh] w-full mx-auto bg-black rounded-[15px]" style="box-shadow: #111 .5em 0em 0em 0em;">
 			<div class="col relative h-full w-full overflow-hidden">
 				<h1 class="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 flex items-center justify-start
-				 	h-full mm:text-[7em] sm:text-[12em] mm:p-0 sm:pb-3 text-white opacity-[0.15] font-extrabold">
+				 	h-full mm:text-[7em] sm:text-[9em] xl:text-[12em] mm:p-0 sm:pb-0 xl:pb-3 text-white opacity-[0.15] font-extrabold">
 					4
 				</h1>
 			</div>

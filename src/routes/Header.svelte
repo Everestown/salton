@@ -22,7 +22,7 @@
 				mobileMenu.style.display = 'flex';
 				header.style.display = 'none';
 			} else {
-				mobileMenu.style.display = 'flex';
+				mobileMenu.style.display = 'none';
 				header.style.display = 'flex';
 			}
 		}
@@ -32,84 +32,85 @@
 	});
 </script>
 
-<header class="sm:ps-[15em] sm:pe-[15em] bg-black">
+<header class="pt-1 sm:ps-[1em] sm:pe-[5em] xl:ps-[5em] xl:pe-[10em] bg-black">
 	<div class="corner">
 		<a href="/home">
-			<img class="mm:p-2 sm:p-2" src={logo} alt="Salton" />
+			<img class="mm:p-1 sm:p-1" src={logo} alt="Salton" />
 		</a>
 	</div>
 
-	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
-		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/home">Главная</a>
-			</li>
-			<li aria-current={$page.url.pathname === '/roadmap' ? 'page' : undefined}>
-				<a href="/roadmap">Roadmap</a>
-			</li>
-		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
-	</nav>
-
-	<div class="social grid grid-cols-2">
+	<div class="social grid grid-cols-4">
 		<div class="corner">
-			<a href="/home">
+			<span class="h-full w-full to-center pe-20">
+				<a class="uppercase text-white font-semibold" href="/roadmap">
+					Roadmap
+				</a>
+			</span>
+		</div>
+		<div class="corner">
+			<a class="social-app" href="/home">
 				<BxlTelegram class="mm:p-1 sm:p-1 outline-none" color="#ffffff" size="36" />
 			</a>
 		</div>
 		<div class="corner">
-			<a href="/home">
+			<a class="social-app" href="/home">
 				<BxlTwitter class="mm:p-1 sm:p-1 outline-none" color="#ffffff" size="36" />
+			</a>
+		</div>
+		<div class="corner">
+			<a class="social-app" href="/home">
+				<BxlInstagram class="mm:p-1 sm:p-1 outline-none" color="#ffffff" size="36" />
 			</a>
 		</div>
 	</div>
 </header>
 
 <div class="mobile-menu fixed bottom-0 z-[99] flex-col w-full">
-	<div class="border bg-[snow] border-none py-3 flex justify-center gap-1 shadow-xl">
+	<div class="border-0 bg-[#101010] border-t border-[#1f1f1f] py-2 flex justify-center gap-1 shadow-xl">
 		<div class="group relative px-4 cursor-pointer flex flex-col items-center justify-center">
-			<button onclick="location.href='/home'" type="button" class="flex h-10 w-10 items-center justify-center rounded-full hover:text-blue-500">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="24" width="24">
-					<path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-				</svg>								
-			</button>
-			<!-- <span class="absolute -top-10 left-[50%] -translate-x-[50%] z-5 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
-				Home
-			</span> -->
-			<span class="text-center">Home</span>
+			<a href="/home" class="flex items-center flex-col justify-center">
+				<button type="button" class="h-7 w-7 to-center rounded-full text-gray-300">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="24" width="24">
+						<path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+					</svg>					
+				</button>
+				<!-- <span class="absolute -top-10 left-[50%] -translate-x-[50%] z-5 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
+					Home
+				</span> -->
+				<span class="text-center text-gray-300">Home</span>
+			</a>
 		</div>
 
 		<div class="group relative px-4 cursor-pointer flex flex-col items-center justify-center">
-			<button onclick="location.href='/roadmap'" type="button" class="flex h-10 w-10  items-center justify-center rounded-full hover:text-blue-500">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="24" width="24">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
-				</svg>
-			</button>
-			<!-- <span class="absolute -top-10 left-[50%] -translate-x-[50%] z-5 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
-				Roadmap
-			</span> -->
-			<span class="text-center">Roadmap</span>
+			<a href="/roadmap" class="flex items-center flex-col justify-center">
+				<button type="button" class="h-7 w-7 to-center rounded-full text-gray-300">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="24" width="24">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
+					</svg>
+				</button>
+				<!-- <span class="absolute -top-10 left-[50%] -translate-x-[50%] z-5 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
+					Roadmap
+				</span> -->
+				<span class="text-center text-gray-300">Roadmap</span>
+			</a>
 		</div>
 
 		<div class="group relative px-4 cursor-pointer flex flex-col items-center justify-center">
-			<button type="button" class="flex h-10 w-10 items-center justify-center rounded-ful cursor-not-allowed" disabled>
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#9CA3AF" height="24" width="24">
-					<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-				</svg>
-			</button>
-			<!-- <span class="absolute -top-10 left-[50%] -translate-x-[50%] z-5 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
-				Soon...
-			</span> -->
-			<span class="text-[#9CA3AF] text-center">Soon</span>
+			<a href="#soon" class="flex items-center flex-col justify-center">
+				<button type="button" class="h-7 w-7 to-center rounded-ful cursor-not-allowed" disabled>
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#9CA3AF" height="24" width="24">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+					</svg>
+				</button>
+				<!-- <span class="absolute -top-10 left-[50%] -translate-x-[50%] z-5 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
+					Soon...
+				</span> -->
+				<span class="text-[#9CA3AF] text-center">Soon</span>
+			</a>
 		</div>
 
 		<div class="group relative px-4 cursor-pointer flex flex-col items-center justify-center">
-			<button type="button" on:click={toggleSocialCard} class="share-btn flex h-10 w-10 items-center justify-center rounded-full hover:text-blue-500"> 
+			<button type="button" on:click={toggleSocialCard} class="share-btn h-7 w-7 to-center rounded-full text-gray-300"> 
 				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="24" width="24">
 					<path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
 				</svg>
@@ -117,7 +118,7 @@
 			<!-- <span class="absolute -top-10 left-[50%] -translate-x-[50%] z-5 origin-left scale-0 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">
 				Share
 			</span> -->
-			<span class="text-center">Share</span>
+			<span class="text-center text-gray-300">Share</span>
 
 			<div class="social-card {isSocialCardVisible ? 'social-card-visible' : 'social-card-hidden'}">
 				<button class="to-center">
@@ -163,7 +164,7 @@ header {
 	height: 4em;
 }
 
-.corner a {
+.corner .social-app {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -177,13 +178,6 @@ header {
 	object-fit: contain;
 }
 
-nav {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	--background: transparent;
-}
-
 svg {
 	width: 2em;
 	height: 3em;
@@ -194,33 +188,8 @@ path {
 	fill: var(--background);
 }
 
-ul {
-	position: relative;
-	padding: 0;
-	margin: 0;
-	height: 3em;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	list-style: none;
-	background: var(--background);
-	background-size: contain;
-}
-
-li {
-	position: relative;
-	height: 100%;
-}
-
-nav a {
-	display: flex;
-	height: 100%;
-	align-items: center;
-	padding: 0 .5rem;
-	color: #fff;
-	font-weight: 500;
+a {
 	font-size: 0.8rem;
-	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	text-decoration: none;
 	transition: color 0.2s linear;
