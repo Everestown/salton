@@ -63,6 +63,12 @@ body {
 		linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%); */
 }
 
+.to-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 input,
 button {
 	font-size: inherit;
@@ -72,4 +78,73 @@ button {
 
 button:focus:not(:focus-visible) {
 	outline: none;
+}
+
+.social-card {
+	width: auto;
+	height: auto;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 10px;
+	border-radius: 20px;
+	position: relative;
+	border: 2px solid transparent;
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+
+.social-card button {
+	background: var(--white-smoke);
+	margin-block: .1em;
+	width: 3em;
+	padding: .5em;
+	height: 3em;
+	border-radius: 100%;
+	transition: all 0.2s ease-in;
+	border: 1px solid snow;
+	cursor: pointer;
+}
+
+.social-card button:hover {
+	filter: invert(1);
+}
+
+@keyframes fadeIn {
+	from { 
+		opacity: 0;
+		transform: translateY(-50%) scale(0);
+	}
+	to { 
+		opacity: 1;
+		transform: translateY(-125%) scale(1);
+	}
+}
+
+@keyframes fadeOut {
+	from { 
+		opacity: 1;
+		transform: translateY(-125%) scale(1);
+	}
+	to { 
+		opacity: 0;
+		transform: translateY(-50%) scale(0);
+	}
+}
+
+.social-card-visible {
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	transform: translate(-50%, -50%);
+	animation: fadeIn 0.5s forwards;
+}
+
+.social-card-hidden {
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	transform: translate(-50%, -50%);
+	animation: fadeOut 0.5s forwards;
 }

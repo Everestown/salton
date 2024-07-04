@@ -1,8 +1,17 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import logo from '$lib/images/logo-white.svg';
-	import { BxlTelegram, BxlTwitter } from 'svelte-boxicons';
+	import { BxlTelegram, BxlTwitter, BxlInstagram } from 'svelte-boxicons';
 	import { onMount } from 'svelte';
+
+	let isSocialCardVisible: boolean = false;
+
+	function toggleSocialCard(): void {
+		isSocialCardVisible = !isSocialCardVisible;
+
+		const socialCard = document.querySelector('.social-card') as HTMLElement;
+		socialCard.style.visibility = isSocialCardVisible ? 'visible' : 'hidden';
+	}
 
 	onMount(() => {
 		const header = document.querySelector('header') as HTMLElement;
@@ -13,7 +22,7 @@
 				mobileMenu.style.display = 'flex';
 				header.style.display = 'none';
 			} else {
-				mobileMenu.style.display = 'none';
+				mobileMenu.style.display = 'flex';
 				header.style.display = 'flex';
 			}
 		}
@@ -61,8 +70,8 @@
 	</div>
 </header>
 
-<div class="mobile-menu z-[99] flex-col w-full">
-	<div class="border bg-[--white-smoke] border-none py-3 flex justify-center gap-1 shadow-xl">
+<div class="mobile-menu fixed bottom-0 z-[99] flex-col w-full">
+	<div class="border bg-[snow] border-none py-3 flex justify-center gap-1 shadow-xl">
 		<div class="group relative px-4 cursor-pointer flex flex-col items-center justify-center">
 			<button onclick="location.href='/home'" type="button" class="flex h-10 w-10 items-center justify-center rounded-full hover:text-blue-500">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="24" width="24">
@@ -100,7 +109,7 @@
 		</div>
 
 		<div class="group relative px-4 cursor-pointer flex flex-col items-center justify-center">
-			<button type="button" class="flex h-10 w-10 items-center justify-center rounded-full hover:text-blue-500"> 
+			<button type="button" on:click={toggleSocialCard} class="share-btn flex h-10 w-10 items-center justify-center rounded-full hover:text-blue-500"> 
 				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" height="24" width="24">
 					<path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
 				</svg>
@@ -109,6 +118,20 @@
 				Share
 			</span> -->
 			<span class="text-center">Share</span>
+
+			<div class="social-card {isSocialCardVisible ? 'social-card-visible' : 'social-card-hidden'}">
+				<button class="to-center">
+					<BxlTelegram class="mm:p-0 sm:p-0 outline-none" color="#2a2a2a" size="42" />
+				</button>
+
+				<button class="to-center">
+					<BxlTwitter class="mm:p-0 sm:p-0 outline-none" color="#2a2a2a" size="42" />
+				</button>
+
+				<button class="to-center">
+					<BxlInstagram class="mm:p-0 sm:p-0 outline-none" color="#2a2a2a" size="42" />
+				</button>
+			</div>
 		</div>
 	</div>
 </div>
